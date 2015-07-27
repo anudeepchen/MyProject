@@ -19,8 +19,13 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    url(r'^$', 'referrals.views.home'),
+    url(r'^home/$', 'referrals.views.home'),
     url(r'^admin/', include(admin.site.urls)),
+    
+    #Student Register
+    url(r'^accounts/student_register/$', 'student_register.views.register'),
+    url(r'^accounts/register_user/$', 'student_register.views.register_user'),  
+
 ]
 
 
