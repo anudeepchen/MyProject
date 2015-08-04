@@ -24,7 +24,11 @@ urlpatterns = [
     
     #Student Register
     url(r'^accounts/student_register/$', 'student_register.views.register'),
-    url(r'^accounts/register_user/$', 'student_register.views.register_user'),  
+    url(r'^accounts/register_user/$', 'student_register.views.register_user'),
+    url(r'^accounts/job/$', 'job_posting.views.job'),
+    url(r'^accounts/job_posting/$', 'job_posting.views.job_posting'),
+    url(r'^accounts/referral_register/$', 'referrals.views.register'),
+    url(r'^accounts/register_referral/$', 'referrals.views.register_referral'),
 
 ]
 

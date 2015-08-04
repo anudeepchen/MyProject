@@ -1,0 +1,153 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load i18n widget_tweaks %}
+
+
+<style>
+
+/* BOTTOM BARS ================================= */
+.bar 	{ position:relative; display:block; width:400px; }
+
+#register-form{
+margin-top : 60px;
+}
+
+.inputMaterial{
+    width:400px;
+} 
+
+h2.font-bold{
+text-align: center;
+color:#18bc9c;
+font-weight: initial;
+}
+
+.row{
+margin-left: 150px;
+padding-left: 70px;
+}
+
+/* Submit button*/
+
+
+div.col-sm-offset-2.col-sm-4{
+    margin-left: 130px;
+    width: 430px;
+}
+
+.btn-primary{
+     background-color : #18bc9c; 
+}
+
+.asterik{color:#c2272d;
+top:12px;left:-10px}
+
+</style>
+
+
+
+
+</head>
+  <body>
+ 
+ {% if messages %}
+        {% for message in messages %}
+			<div class="message hidden">{{ message }}</div>
+		{% endfor %}
+	{% endif %}	
+
+    <!-- Message from Server -->	
+    
+        <!-- === Section 1 - Register Form === -->
+            <div class="container" id = "register-form">
+                <div class="col-md-12 col-md-offset-2 col-sm-12 col-sm-offset-2"> <!-- Wrapper -->
+                    <form class="form-horizontal" role="form" action="/accounts/register_user/" method="POST" id="register">
+                <!-- Form -->
+                    {% csrf_token %}
+				
+                     <div class="row ">
+                    <h2 class="font-bold col-md-8 col-md-4">Sign Up</h2>
+                        </div>
+                                	 {% for field in form %}
+									 {% if field.name != 'acc_locked' %}								
+									{% if field.errors %}
+									 <div class="group">
+										<div class="col-md-6 col-md-offset-1 col-sm-8 col-xs-12">
+											<div class="group">      
+												{{field | attr:"class:inputMaterial" }}
+                                                <span class="highlight"></span>
+                                                <span class="bar"></span>
+                                                <label>{{field.label}}<span class='required'>*</span></label>
+                                            </div>   
+                                            <span class="help-block" style="color: #ed1c24">
+												{% for error in  field.errors %}{{ error }}{% endfor %}
+										</div>
+									</div>
+								<!-- /errorform -->
+								{% else %}	
+									
+									 <div class="group">
+										<div class="col-md-6 col-md-offset-1 col-sm-8 col-xs-12">
+											<div class="group">      
+												{{field | attr:"class:inputMaterial"|attr:"required"}}
+                                                <span class="highlight"></span>
+                                                <span class="bar"></span>
+                                                <label>{{field.label}}<span class='asterik'>*</span></label>
+                                            </div>  
+										</div>
+									</div>
+									 {% endif %}
+									 {% endif %}
+									 {% endfor %}
+                        <!-- Submit Button -->
+                        <div class="group">
+                            <div class="col-sm-offset-2 col-sm-4">
+                                <button type="submit" class="btn btn-primary btn-block" id="submit">
+                                    <h4 class="font-semibold">Submit</h4></button>
+                            </div>
+                        </div> <!-- /submitbutton -->
+                    </form> <!-- /form -->
+                </div> <!-- /wrapper -->
+            </div> <!-- /container -->
+	    
+        <!-- Navigation Bar -->
+        
+        <nav class="navbar navbar-default navbar-fixed-top" style="
+    padding-top: 0px;
+    padding-bottom: 0px;
+">
+        <div class="nav-container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" style = "color : white;">ZigZag</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="/" style = "color : white;">Home</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#about" style = "color : white;">About</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#contact" style = "color : white;">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav> 
+	<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+</body> 
+{% endblock %}

@@ -4,7 +4,6 @@ from django.core.validators import RegexValidator
 
 
 class Register(models.Model):
-    
     first_name = models.CharField(max_length=120, null=False, blank=False, default="")
     last_name = models.CharField(max_length=120, null=False, blank=False, default="")
     email = models.EmailField(null=False, blank=False, default="", unique = True)
@@ -14,7 +13,8 @@ class Register(models.Model):
     confirm_password = models.CharField(max_length=120, null=False, blank=False, default="")
     timestamp = models.DateTimeField(auto_now_add = True, auto_now = False)
     updated = models.DateTimeField(auto_now_add = False, auto_now = True)
-    #acc_locked = models.BooleanField(default = False)
+    acc_locked = models.BooleanField(default = False)
+    last_login = models.DateTimeField(auto_now_add = True, auto_now = False)
     
     def _str_(self):
         return self.email

@@ -19,7 +19,7 @@ def register(request):
 
 # Method allows the user to enter the information and submit
 def register_user(request):
-    print(request.method)
+
     if request.method == "POST":
         form = RegisterForm(request.POST)
         try :
@@ -34,12 +34,13 @@ def register_user(request):
                 new_form = Register(first_name=first_name,last_name=last_name,email=email,phone=phone,password=password)
                 new_form.save()
                 form = RegisterForm()
-                return HttpResponseRedirect('/accounts/login')
+                return HttpResponseRedirect('/')
             else :
                 messages.error(request, "There is an error in your submission!")
         except IntegrityError:
             messages.error(request, "The email you entered is already exist!")
             form = RegisterForm()
     else : form = RegisterForm()
+    #context = {"form" : RegisterForm()}
     template = "student_register.html"
     return render_to_response(template, context_instance = RequestContext(request,locals()))

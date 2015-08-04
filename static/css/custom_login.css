@@ -96,7 +96,7 @@ label 				 {
 }
 
 /* active state */
-.inputMaterial:focus ~ label, .inputMaterial:valid ~ label 		{
+.inputMaterial:focus ~ label	{
   top:-20px;
   font-size:14px;
   color: #009688;
