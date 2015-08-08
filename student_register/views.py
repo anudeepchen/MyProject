@@ -6,7 +6,9 @@ from django.contrib import messages
 from django.shortcuts import render, render_to_response, RequestContext, HttpResponseRedirect
 from django.contrib.auth.hashers import make_password,check_password
 from django.db import IntegrityError
-
+from django.contrib.auth.models import User
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth import login, authenticate
 # Create your views here.
 
 # Method calls the register.html form allowing user to enter his personal information       
@@ -31,8 +33,17 @@ def register_user(request):
                 email = form.cleaned_data['email']
                 phone = form.cleaned_data['phone']
                 password = form.cleaned_data['password']
-                new_form = Register(first_name=first_name,last_name=last_name,email=email,phone=phone,password=password)
+                
+                
+                new_user = User.objects.create_user(request.POST['email'],email,
+                                        request.POST['password'])
+                new_user.first_name = request.POST['first_name']
+                new_user.last_name = request.POST['last_name']
+                new_user.save()
+                
+                new_form = Register(email=email,phone=phone)
                 new_form.save()
+                
                 form = RegisterForm()
                 return HttpResponseRedirect('/')
             else :
@@ -43,4 +54,5 @@ def register_user(request):
     else : form = RegisterForm()
     #context = {"form" : RegisterForm()}
     template = "student_register.html"
+    print(messages)
     return render_to_response(template, context_instance = RequestContext(request,locals()))

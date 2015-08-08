@@ -62,7 +62,7 @@ top:12px;left:-10px}
         <!-- === Section 1 - Register Form === -->
             <div class="container" id = "register-form">
                 <div class="col-md-12 col-md-offset-2 col-sm-12 col-sm-offset-2"> <!-- Wrapper -->
-                    <form class="form-horizontal" role="form" action="/accounts/register_referral/" method="POST" id="register">
+                    <form class="form-horizontal" role="form" action="/accounts/register_user/" method="POST" id="register">
                 <!-- Form -->
                     {% csrf_token %}
 				
@@ -75,10 +75,10 @@ top:12px;left:-10px}
 									 <div class="group">
 										<div class="col-md-6 col-md-offset-1 col-sm-8 col-xs-12">
 											<div class="group">      
-												{{field | attr:"class:inputMaterial" }}
+												{{field | attr:"class:inputMaterial" | attr:"required"}}
                                                 <span class="highlight"></span>
                                                 <span class="bar"></span>
-                                                <label>{{field.label}}<span class='required'>*</span></label>
+                                                <label>{{field.label}}<span class="asterik">*</span></label>
                                             </div>   
                                             <span class="help-block" style="color: #ed1c24">
 												{% for error in  field.errors %}{{ error }}{% endfor %}
@@ -93,7 +93,7 @@ top:12px;left:-10px}
 												{{field | attr:"class:inputMaterial"|attr:"required"}}
                                                 <span class="highlight"></span>
                                                 <span class="bar"></span>
-                                                <label>{{field.label}}<span class='asterik'>*</span></label>
+                                                <label>{{field.label}}<span class="asterik">*</span></label>
                                             </div>  
 										</div>
 									</div>

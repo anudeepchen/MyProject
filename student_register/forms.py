@@ -1,8 +1,7 @@
 from .models import Register
 from django.contrib import messages
 from django import forms
-from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth.models import User
+
 #from nocaptcha_recaptcha.fields import NoReCaptchaField
 
 class RegisterForm(forms.ModelForm):
@@ -10,7 +9,6 @@ class RegisterForm(forms.ModelForm):
 	def __init__(self,*args,**kwargs):
 		super(RegisterForm, self).__init__(*args, **kwargs)
 		
-	
 	
 	def clean(self):
 		if 'password' in self.cleaned_data and 'confirm_password' in self.cleaned_data:

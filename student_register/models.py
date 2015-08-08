@@ -18,3 +18,6 @@ class Register(models.Model):
     
     def _str_(self):
         return self.email
+
+
+    #User.profile = property(lambda u : UserProfile.objects.get_or_create(user=u)[0])
