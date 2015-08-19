@@ -37,8 +37,10 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'referrals',
+    'employee_register',
     'student_register',
+    'login_employee',
+    'login_student',
     'widget_tweaks',
     'job_posting',
 )

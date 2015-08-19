@@ -25,17 +25,13 @@ def job_posting(request):
         # create a form instance and populate it with data from the request:
         form = JobDetailsForm(request.POST)
         # check whether it's valid:
+        print(form.is_valid())
         if form.is_valid():
             # save the form to the database
             save_it = form.save(commit=False)
             save_it.save()
-            
-            # send email 
-            #sendemail(form)
-            
             # reset the form
-            form = JobDetailsForm()
-            
+            form = JobDetailsForm()         
             messages.success(request, "Accepted")
         else:
             messages.error(request, "Rejected")
@@ -43,3 +39,12 @@ def job_posting(request):
         form = JobDetailsForm()
     
     return render_to_response("job_posting.html", locals(), context_instance=RequestContext(request))
+
+
+def fetch_jobs(request):
+    #if request.method == "POST":
+        #data = Job_Details.objects.all()
+        #print(data)
+        #if data is not None:
+    jobs = [1,2,3,4,5]
+    return render_to_response("job_display.html",{'jobs' : jobs},context_instance=RequestContext(request))

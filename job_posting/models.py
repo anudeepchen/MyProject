@@ -6,17 +6,16 @@ class Job_Details(models.Model):
     company = models.CharField(max_length=120, null=False, blank=False, default="")
     url_regex = URLValidator
     company_website = models.CharField(max_length=30, validators=[url_regex], null = False, blank=False, default="")
-    
     industry = models.CharField(max_length=120, null=False, blank=False, default="")
     job_title = models.CharField(max_length=120, null=False, blank=False, default="")
     description = models.TextField(max_length=250, null=False, blank=False, default="")
     job_posting = models.CharField(max_length=120, null=False, blank=False, default="")
-    role = models.EmailField(null=False, blank=False, default="", unique = True)
+    role = models.CharField(max_length=120, null=False, blank=False, default="")
     location = models.CharField(max_length=120, null=False, blank=False, default="")
     
-    FULL_TIME = 'CL'
-    CONTRACTOR = 'IN'
-    INTERN = 'PA'
+    FULL_TIME = 'FT'
+    CONTRACTOR = 'CO'
+    INTERN = 'IN'
     INTEREST_CHOICES = (
         (FULL_TIME, 'Full-time'),
         (CONTRACTOR, 'Contractor'),

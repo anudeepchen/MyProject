@@ -1,9 +1,9 @@
 from django.contrib import admin
-from .models import Register
+from .models import Student_Profile
 
 # Register your models here.
 class RegisterAdmin(admin.ModelAdmin):
-	list_display = ['first_name','last_name','email','phone','password','timestamp','updated','acc_locked','last_login']
+	list_display = ['email','phone']
 	class Meta:
-		model = Register
-admin.site.register(Register,RegisterAdmin)
+		model = Student_Profile
+admin.site.register(Student_Profile,RegisterAdmin)

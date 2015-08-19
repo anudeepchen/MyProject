@@ -1,0 +1,86 @@
+
+{%extends "base.html"%}
+{% block content %}
+
+<style>
+div.box{
+   margin-top : 90px;
+}
+
+.forgot-password{
+   margin-left: 70px;
+}
+</style>
+</head>
+<body>
+   
+   
+   
+   
+   
+     <nav class="navbar navbar-default navbar-fixed-top" style="
+    padding-top: 0px;
+    padding-bottom: 0px;
+">
+        <div class="nav-container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" style = "color : white;">ZigZag</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="/" style = "color : white;">Home</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#about" style = "color : white;">About</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#contact" style = "color : white;">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav> 
+
+<div class = "section" id = "slide2">
+   <div class="container">
+     <div class="box">
+       <div id="header">
+	    <div id="bottom-head"><h1 id="logintoregister">Login</h1></div>
+	  </div> 
+       <form action="/accounts/job_details/" method="post">
+		  {% csrf_token %}
+        <div class="group">      
+         <input class="inputMaterial" type="email" required>
+         <span class="highlight"></span>
+         <span class="bar"></span>
+         <label>Email</label>
+        </div>
+	    <div class="group">      
+         <input class="inputMaterial" type="password" required>
+         <span class="highlight"></span>
+         <span class="bar"></span>
+         <label>Password</label>
+        </div>
+      <button id="buttonlogintoregister" type="submit">Login</button>
+  <p class="footer-text">Not a member?  <span class="sign-up"><a href=/accounts/student_register>Sign up now</a></span></p>
+  <p class="footer-text"><span class="forgot-password"><a href=/accounts/student_register>Forgot Password</a></span></p>
+      </form>
+    </div>
+  </div>
+ </div>
+</body>
+
+{% endblock %}
