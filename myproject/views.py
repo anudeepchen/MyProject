@@ -134,3 +134,7 @@ def get_glassdoor(request):
 
 def  home(request):
     return render(request,"home.html",{})
+
+def  test(request):
+    return render(request,"test1.html",{})
+

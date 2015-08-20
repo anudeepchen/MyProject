@@ -50,6 +50,9 @@ urlpatterns = [
     
     #glassdoor
      url(r'^auth/glassdooor/$', 'myproject.views.get_glassdoor'),
+     
+     #test
+     url(r'^auth/test/$', 'myproject.views.test'),
 ]
 
 

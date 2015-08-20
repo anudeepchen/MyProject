@@ -1,16 +1,9 @@
- 
-
- 
- div#slide4.section{
+div#slide4.section{
   height : 601px;
  }
- 
- div.row{
-  padding-top:40px;
-}
   #about{
 	background-color: #18bc9c;
-  }
+}
 
 div#slide1.section{
   width : 100%;
