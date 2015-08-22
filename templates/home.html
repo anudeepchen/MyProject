@@ -1,11 +1,16 @@
 
 {%extends "base.html"%}
 {% block content %}
-<script src="/static/js/shrink.js"></script>
 <link rel="stylesheet" href="/static/css/hover-icon.css" />
+<link rel="stylesheet" href="/static/css/flaticon.css" />
+<link rel="stylesheet" href="/static/css/tooltipster.css" />
+<link rel="stylesheet" href="/static/css/hint.css" />
+<link rel="stylesheet" href="/static/css/tooltipster-light.css" />
 <link rel="stylesheet" href="w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
+<script  src="/static/js/jquery.tooltipster.min.js"></script>
+<script  src="/static/js/jquery.tooltipster.js"></script>
+<script src="/static/js/shrink.js"></script>
 <style>
 #tech-container{
 		position: relative;
@@ -19,10 +24,14 @@
 		margin-left: 50px;
 }
 
-#ml-icon:hover {
-		color : #fff;
+#footer-container{
+		height: 220px;
 }
 
+.company_logo_item {
+    margin-top: 40px;
+	margin-left : 20px;
+}
 </style>
 
 </head>
@@ -89,38 +98,36 @@
 		</div>
     </div>
 
-<div class = "section" id = "slide3">
+<div class = "section" id = "slide2">
    <div class="container">
-      
-    </div>
+   
    </div>
-
+</div>
 
   <div class="section" id="about">
         <div class="container" id = "tech-container">
-            <div class="row"id = "tech-row">
+            <div class="row" id = "tech-row">
 				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-				    <div class="block">
-                        <i class="hovicon effect-3 sub-a"><b class="material-icons w3-text-teal" style="font-size:64px;margin-top: 10px">cloud</b>
+				    <div class="block hint--top hint--rounded" data-hint="Thank youafeklajfeioajfiejaiojdjfaelijfkaoiej!">
+                        <i class="hovicon effect-3 sub-a"><b class="material-icons w3-text-teal" style="font-size:70px;margin-top: 10px">cloud</b>
                         </i>
                     </div>
 				</div>
                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
 				    <div class="block">
-                        <i class="hovicon effect-3 sub-a"><b class="material-icons w3-text-teal" style="font-size:64px;margin-top: 10px">laptop</b>
+                        <i class="hovicon effect-3 sub-a"><b class="material-icons w3-text-teal" style="font-size:70px;margin-top: 10px">laptop</b>
                         </i>
                     </div>
 				</div>
 				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
 				    <div class="block">
-                        <i class="hovicon effect-3 sub-a"><b class="material-icons w3-text-teal" style="font-size:64px;margin-top: 10px">settings</b>
+                        <i class="hovicon effect-3 sub-a"><b class="material-icons w3-text-teal" style="font-size:70px;margin-top: 10px">settings</b>
                         </i>
                     </div>
 				</div>
 				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
 				    <div class="block">
-                        <i class="hovicon effect-3 sub-a" id = "ml-icon"><img u="image" src="/static/icons/hexagon2.ico" />
-						</i>
+                        <i class="hovicon effect-3 sub-a" ><b class="flaticon-data2"></b></i>
 					</div>
 				</div>
 			
@@ -129,41 +136,89 @@
         </div>  
   </div>
 
+<div class = "section" id = "slide4">
+   <div class="container">
+		<div class="box">
+				<div class = "row">
+		     <div id="header">
+	           <div id="bottom-head"><h1 id="logintoregister">Login</h1></div>
+	     </div> 
+      <div class="col-md-5 col-sm-3 col-xs-3 company_logo_item">
+            <img alt="logo" src="/static/logos/Amazon.png" style ="width: 150px; height: 41px;">
+		</div>
+		<div class="col-md-5 col-sm-3 col-xs-3 company_logo_item">
+            <img alt="logo" src="/static/logos/Google.png" style ="width: 150px; height: 41px;">
+		</div>
+		<div class="col-md-5 col-sm-3 col-xs-3 company_logo_item">
+            <img alt="logo" src="/static/logos/Facebook.png" style ="width: 150px; height: 41px;">
+		</div>
+		<div class="col-md-5 col-sm-3 col-xs-3 company_logo_item">
+            <img alt="logo" src="/static/logos/Adobe.png" style ="width: 150px; height: 60px;">
+		</div>
+				</div>
+		</div>
+    <div class="col-md-2 col-sm-3 col-xs-3 company_logo_item">
+            <img alt="logo" src="/static/logos/Google.png" style ="width: 150px; height: 41px;">
+		</div>
+	<div class="col-md-2 col-sm-3 col-xs-3 company_logo_item">
+            <img alt="logo" src="/static/logos/Facebook.png" style ="width: 150px; height: 41px;">
+		</div>
+	<div class="col-md-2 col-sm-3 col-xs-3 company_logo_item">
+            <img alt="logo" src="/static/logos/Uber.png" style ="width: 150px; height: 60px;">
+		</div>
+	<div class="col-md-2 col-sm-3 col-xs-3 company_logo_item">
+            <img alt="logo" src="/static/logos/Adobe.png" style ="width: 150px; height: 60px;">
+		</div>
+	<div class="col-md-2 col-sm-3 col-xs-3 company_logo_item">
+            <img alt="logo" src="/static/logos/Ibm.png" style ="width: 150px; height: 60px;">
+		</div>
+	<div class="col-md-2 col-sm-3 col-xs-3 company_logo_item">
+            <img alt="logo" src="/static/logos/Autodesk.png" style ="width: 150px; height: 40px;">
+		</div>
+	<div class="col-md-2 col-sm-3 col-xs-3 company_logo_item">
+            <img alt="logo" src="/static/logos/Linkedin.png" style ="width: 100px; height: 60px;">
+		</div>
+   </div>
+</div>
 
 
+<footer class="text-center">
+        <div class="footer-above">
+            <div class="container" id= "footer-container">
+                <div class="row">
+                    <div class="footer-col col-md-4">
+                        <h3>Location</h3>
+                        <p>Gates Hillman<br>Carnegie Mellon University, PA 15213</p>
+                    </div>
+                    <div class="footer-col col-md-4">
+                        <h3>Around the Web</h3>
+                        <ul class="list-inline">
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-instagram"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-col col-md-4">
+                        <h3>About Us</h3>
+                        <p>Working for Passion <a href="http://startbootstrap.com">To make our lives better</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-<div class="section" id="section1">
-			<div class="slide" id="slide1">
-				<div class="container">
-					<div class="row title-row">
-						<div class="font-bold hidden">Making Drones Accesible</div>
-					</div> <!-- /row -->
-					<div class="row subtitle-row">
-						<div class="font-thin hidden">Skycision provides a data-driven platform which processes drone-collected aerial imagery.</div>
-					</div> <!-- /row -->
-				</div> <!-- /container -->
-			</div> <!-- /slide1 -->
-			<div class="slide" id="slide2">
-				<div class="container">
-					<div class="row title-row">
-						<div class="font-bold hidden">Next Generation Agriculture</div>
-					</div> <!-- /row -->
-					<div class="row subtitle-row">
-						<div class="font-thin hidden">Our services are specifically designed for the modern grower enhancing their ability to manage a large-scale operation.</div>
-					</div> <!-- /row -->
-				</div> <!-- /container -->
-			</div> <!-- /slide2 -->
-			<div class="slide" id="slide3"> 
-				<div class="container">
-					<div class="row title-row">
-						<div class="font-bold hidden">Precision At Your Finger Tips</div>
-					</div> <!-- /row -->
-					<div class="row subtitle-row">
-						<div class="font-thin hidden">Identification of pests, weeds, or blights before they make a significant impact on a crops yield can save thousands of hard-earned dollars for growers.</div>
-					</div> <!-- /row -->
-				</div> <!-- /container -->
-			</div> <!-- /slide3 -->
-		
 
 <!-- jQuery -->
     <script src="http://ironsummitmedia.github.io/startbootstrap-freelancer/js/jquery.js"></script>
