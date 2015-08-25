@@ -6,12 +6,27 @@
 <link rel="stylesheet" href="/static/css/tooltipster.css" />
 <link rel="stylesheet" href="/static/css/hint.css" />
 <link rel="stylesheet" href="/static/css/tooltipster-light.css" />
-<link rel="stylesheet" href="w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-<script  src="/static/js/jquery.tooltipster.min.js"></script>
-<script  src="/static/js/jquery.tooltipster.js"></script>
-<script src="/static/js/shrink.js"></script>
+<link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet"
+  type="text/css"
+>
 <style>
+body{
+		font-family: "Lato", Sans-serif;
+    font-size: 15px;
+    line-height: 1.33333333;
+	
+}
+
+.intro-block{
+  background: rgba(24, 188, 156, 0.7);
+  position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 #tech-container{
 		position: relative;
 }
@@ -29,9 +44,96 @@
 }
 
 .company_logo_item {
-    margin-top: 40px;
+    margin-top: 60px;
 	margin-left : 20px;
 }
+
+#company-row{
+		margin-top : 20px;
+}
+#software-box{
+  width : 650px;
+  margin-right: 20px;
+  height : 400px;
+  float: left;
+}
+
+.navbar {
+		background-color:rgba(44, 62, 80, 0.6);
+		font-family: 'Lato', serif;
+        font-size: 24px;
+		font-weight: 300;
+}
+
+
+#container-slide1{
+		padding-top : 100px;
+		height: 100%;
+}
+.overlay{
+		width : 100%;
+		height : 100%;
+		padding : 20px;
+		position : relative;
+}
+
+.textarea {
+		height : 50%;
+		margin-top: 50px;
+}
+
+.textarea > h6{
+			color: white;
+		margin-top : 100px;
+		font-family: 'Lato', serif;
+		font-weight: 400;
+		text-align : center;
+		font-size: 30px;
+}
+
+#howitworksbutton {
+    background: rgba(24, 188, 156, 0.7);
+	border-style: none;
+    color: #fff;
+    word-spacing: 5px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+	 font-size: 20px;
+}
+
+#howitworksbutton:hover {
+  background: rgba(24, 188, 156, 1);
+  border-style: none;
+  color: #fff;
+}
+
+#slide2{
+		width : 100%;
+		height : 150%;
+}
+.mission-block{
+		width : 100%;
+		height : 150%;
+		padding-top: 100px; 
+}
+
+.feature-values{
+		font-family: "Lato", Sans-serif;
+		font-weight: 400;
+		text-transform: none;
+}
+
+.text-block{
+		
+		background-color:rgba(44, 62, 80, 1);
+}
+
+#text-area{
+		height: 200px;
+}
+
 </style>
 
 </head>
@@ -70,37 +172,27 @@
     </nav>
 
 <div class = "section" id = "slide1">
-        <div class="container">   
-                 <div class="col-xs-12 col-sm-6">
-					   <div class="row seeker-ctas"> 
-							<!--Seeker Links -->
-							<div class="col-xs-10 col-xs-offset-1 col-sm-10 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 text-center">
-								<div class="seeker-btn-wrapper">
-								<div class= "center-head1"><h1>For Students</h1></div>
-									<img class="hidden-xs1" src="http://media.newjobs.com/homepage/images/icons/profile_icon.png" alt="" />	
-								</div>  
-							<div class="btn btn-default" id = "button1"><a href="/accounts/student_login">Log In </a></div>
-							</div>
-						</div>
+		   <div class = "intro-block intro-bg">
+        <div class="container" id = "container-slide1">
+				<div class = "overlay">
+					<div class = "textarea" align="center">
+						<h6 class = "header-mission">Our mission is to revolutinize the Job Search</h6>
 					</div>
-			<div class="col-xs-12 col-sm-6"> 
-						<!--Employer Links -->
-						<div class="row text-center">
-							<div class="col-xs-10 col-xs-offset-1 col-sm-10 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 text-center">
-								<div class="employer-btn-wrapper">
-									<div class= "center-head2"><h1>For Employers</h1></div>
-									<img class="hidden-xs2" src="http://media.newjobs.com/homepage/images/icons/employers_icon.png" alt="" />
-								</div>  
-							<div class="btn btn-default" id = "button2"><a href="/accounts/employee_login">Log In </a></div>
-							</div>
-						</div>
+					<div class = "col-md-3 col-md-offset-5">
+					<button type="button" id = "howitworksbutton" class="btn btn-primary"><strong>Know How!</strong></button>  	
+				    </div>
 					</div>
+				</div>
 		</div>
     </div>
 
 <div class = "section" id = "slide2">
-   <div class="container">
-   
+   <div class = "mission-block mission-bg">
+		<div class="container">
+				<div class = "col-md-10 col-md-offset-1 text-center">
+						<h1 class="feature-values">What we do</h1>
+				</div>
+		</div>		
    </div>
 </div>
 
@@ -108,56 +200,75 @@
         <div class="container" id = "tech-container">
             <div class="row" id = "tech-row">
 				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-				    <div class="block hint--top hint--rounded" data-hint="Thank youafeklajfeioajfiejaiojdjfaelijfkaoiej!">
+				    <a class="block hint--top hint--rounded" data-hint="Click here" id = "cloud-button">
                         <i class="hovicon effect-3 sub-a"><b class="material-icons w3-text-teal" style="font-size:70px;margin-top: 10px">cloud</b>
                         </i>
-                    </div>
+                    </a>
 				</div>
                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-				    <div class="block">
+				    <div class="block hint--top hint--rounded" data-hint="Click here" id = "laptop-button">
                         <i class="hovicon effect-3 sub-a"><b class="material-icons w3-text-teal" style="font-size:70px;margin-top: 10px">laptop</b>
                         </i>
                     </div>
 				</div>
 				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-				    <div class="block">
+				    <div class="block hint--top hint--rounded" data-hint="Click here" id = "tech-button">
                         <i class="hovicon effect-3 sub-a"><b class="material-icons w3-text-teal" style="font-size:70px;margin-top: 10px">settings</b>
                         </i>
                     </div>
 				</div>
 				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-				    <div class="block">
+				    <div class="block hint--top hint--rounded" data-hint="Click here" id = "ml-button">
                         <i class="hovicon effect-3 sub-a" ><b class="flaticon-data2"></b></i>
 					</div>
 				</div>
-			
 				</div>
 	        </div>
         </div>  
   </div>
 
+
+<div class="text-block" id = "cloud-block" style="display: none;">
+	<div class = "container" id = "text-area">
+		<h1 class="feature-values" style = "color : #18bc9c;">Cloud
+		<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="float: right;" >
+        <a class="close" id="close-button" style="float: right;font-size: 50px; font-weight: 300">
+		&times;</a>
+		</div>
+		</h1>
+		<h6 class = "header-mission" style = "color : #18bc9c;">Using Cloud just for fun</h6>
+		
+		</div>
+</div>	
+		
+	<div class="text-block" id = "cloud-api" style="display: none;">
+	<div class = "container">
+		<h1 class="feature-values">API Integration</h1>
+		</div>
+</div>	
+		
+	<div class="text-block" id = "cloud-tech" style="display: none;">
+	<div class = "container">
+		<h1 class="feature-values">Technologies</h1>
+		</div>
+</div>	
+		
+	<div class="text-block" id = "cloud-ml" style="display: none;">
+	<div class = "container">
+		<h1 class="feature-values">Machine Learning</h1>
+		</div>
+</div>
+	
+	
 <div class = "section" id = "slide4">
    <div class="container">
-		<div class="box">
-				<div class = "row">
-		     <div id="header">
-	           <div id="bottom-head"><h1 id="logintoregister">Login</h1></div>
-	     </div> 
-      <div class="col-md-5 col-sm-3 col-xs-3 company_logo_item">
+				<div id="header">
+	    <div id="bottom-head"><h2 id="logintoregister"></h2></div>
+	  </div> 
+      <div class="col-md-2 col-sm-3 col-xs-3 company_logo_item">
             <img alt="logo" src="/static/logos/Amazon.png" style ="width: 150px; height: 41px;">
 		</div>
-		<div class="col-md-5 col-sm-3 col-xs-3 company_logo_item">
-            <img alt="logo" src="/static/logos/Google.png" style ="width: 150px; height: 41px;">
-		</div>
-		<div class="col-md-5 col-sm-3 col-xs-3 company_logo_item">
-            <img alt="logo" src="/static/logos/Facebook.png" style ="width: 150px; height: 41px;">
-		</div>
-		<div class="col-md-5 col-sm-3 col-xs-3 company_logo_item">
-            <img alt="logo" src="/static/logos/Adobe.png" style ="width: 150px; height: 60px;">
-		</div>
-				</div>
-		</div>
-    <div class="col-md-2 col-sm-3 col-xs-3 company_logo_item">
+		<div class="col-md-2 col-sm-3 col-xs-3 company_logo_item">
             <img alt="logo" src="/static/logos/Google.png" style ="width: 150px; height: 41px;">
 		</div>
 	<div class="col-md-2 col-sm-3 col-xs-3 company_logo_item">
@@ -179,8 +290,7 @@
             <img alt="logo" src="/static/logos/Linkedin.png" style ="width: 100px; height: 60px;">
 		</div>
    </div>
-</div>
-
+ </div>
 
 <footer class="text-center">
         <div class="footer-above">
@@ -230,7 +340,11 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
     <script src="http://ironsummitmedia.github.io/startbootstrap-freelancer/js/classie.js"></script>
     <script src="http://ironsummitmedia.github.io/startbootstrap-freelancer/js/cbpAnimatedHeader.js"></script>
-
+	
+	<!-- tooltipster -->
+	 <script  src="/static/js/jquery.tooltipster.min.js"></script>
+	 <script src="/static/js/shrink.js"></script>
+	 <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.0.min.js"></script>
 
 </body>
 {% endblock %}
