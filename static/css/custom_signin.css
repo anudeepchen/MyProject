@@ -23,14 +23,6 @@ height: 100%;
 width: 100%;
 }
 
-body {
-	font-family: "Titillium Web", sans-serif;
-	font-weight: normal;
-	overflow-x: hidden;
-	-webkit-font-smoothing: antialiased !important;
-}
- 
-
 
 #siginin .container {
   padding-top: 200px;
@@ -105,11 +97,6 @@ div#slide2.section{
   margin-bottom: 10px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-}
-
-
-div.container{
-  height:400px;
 }
 
 #text3{

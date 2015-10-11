@@ -138,3 +138,5 @@ def  home(request):
 def  test(request):
     return render(request,"test1.html",{})
 
+def  howitworks(request):
+    return render(request,"howitworks.html",{})

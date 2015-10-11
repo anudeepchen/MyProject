@@ -2,77 +2,183 @@
 
 {% block content %}
 {% load i18n widget_tweaks %}
+
 <link rel="stylesheet" href="/static/css/student-register-style.css" />
 
+<style>
+	
+	body{
+		background: #e6e6e6;
+		overflow: hidden;
+	}
+	
+	.navbar {
+   background-color:rgba(44, 62, 80, 1);
+   font-family: 'Lato', serif;
+   font-size: 20px;
+   font-weight: 300;
+   padding: 10px;
+  }
+  
+  #register-form{
+	background-color: white;
+	margin-top : 150px;
+	height: 450px;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  }
+
+  #signupform{
+	width : 70%;
+	float: right;
+  }
+  
+  #align_names {
+	width : 700px;
+  }
+  
+  #align_field {
+	width : 700px;
+  }
+  #id_first_name {
+	float:left;
+	width : 310px;
+	margin: 0;
+  }
+ 
+  #id_last_name{
+	float :right;
+	width : 310px;
+	margin: 0;
+  }
+  
+  #align_password {
+	width : 700px;
+  }
+  
+   #id_password {
+	float:left;
+	width : 310px;
+	margin: 0px;
+  }
+  
+  #id_reenter_password{
+	float :right;
+	width : 310px;
+	margin: 0px;
+  }
+  
+   #id_email {
+	float:left;
+	width : 310px;
+	margin: 0px;
+  }
+  
+  #id_phone{
+	float :right;
+	width : 310px;
+	margin: 0px;
+  }
+  
+  #signup_row{
+	margin : 0px;
+  }
+  
+  #submitid{
+	margin-top: 30px;
+	margin-left: 90px;
+  }
+  
+  
+  .inputMaterial:focus ~ label, .inputMaterial:valid ~ label 	{
+  top:-20px;
+  font-size:14px;
+  color: black;
+}
+	</style>
 </head>
   <body>
- 
- {% if messages %}
-        {% for message in messages %}
-			<div class="message hidden">{{ message }}</div>
-		{% endfor %}
-	{% endif %}	
-
-    <!-- Message from Server -->	
+ 	
     
         <!-- === Section 1 - Register Form === -->
             <div class="container" id = "register-form">
-                <div class="col-md-12 col-md-offset-2 col-sm-12 col-sm-offset-2"> <!-- Wrapper -->
+				<div class = "container" id = "signupform">
                     <form class="form-horizontal" role="form" action="/accounts/register_user/" method="POST" id="register">
                 <!-- Form -->
                     {% csrf_token %}
 				
-                     <div class="row ">
+                <div class="row " id = "signup_row">
                     <h2 class="font-bold col-md-8 col-md-4">Sign Up</h2>
                         </div>
-                                	 {% for field in form %}
-									 {% if field.name != 'acc_locked' %}								
-									{% if field.errors %}
-									 <div class="group">
-										<div class="col-md-6 col-md-offset-1 col-sm-8 col-xs-12">
-											<div class="group">      
-												{{field | attr:"class:inputMaterial" | attr:"required"}}
+								<div class = "container" id = "align_names" style = "margin-top: 30px;">
+								 <div class="group" id = "id_first_name">
+										<div class="col-md-6 col-md-offset-1 col-sm-8 col-xs-12">    
+												<input class="inputMaterial" type="text" placeholder=""
+      onblur="this.placeholder = ''" onfocus="this.placeholder = 'John'" required>
                                                 <span class="highlight"></span>
                                                 <span class="bar"></span>
-                                                <label>{{field.label}}<span class="asterik">*</span></label>
-                                            </div>   
-                                            <span class="help-block" style="color: #ed1c24">
-												{% for error in  field.errors %}{{ error }}{% endfor %}
+                                                <label style = "margin-left : 10px;">First Name<span class="asterik">*</span></label>
 										</div>
 									</div>
-								<!-- /errorform -->
-								{% else %}	
-									
-									 <div class="group">
-										<div class="col-md-6 col-md-offset-1 col-sm-8 col-xs-12">
-											<div class="group">      
-												{{field | attr:"class:inputMaterial"|attr:"required"}}
+								 <div class="group" id = "id_last_name">
+										<div class="col-md-6 col-md-offset-1 col-sm-8 col-xs-12"> 
+												<input class="inputMaterial" type="text" placeholder=""
+      onblur="this.placeholder = ''" onfocus="this.placeholder = 'Swagger'"  required>
                                                 <span class="highlight"></span>
                                                 <span class="bar"></span>
-                                                <label>{{field.label}}<span class="asterik">*</span></label>
-                                            </div>  
+                                                <label style = "margin-left : 10px;">Last Name<span class="asterik">*</span></label>
 										</div>
 									</div>
-									 {% endif %}
-									 {% endif %}
-									 {% endfor %}
+								 </div>
+								<div class = "container" id = "align_field" style = "margin-top: 30px;">
+								 <div class="group" id = "id_email">
+										<div class="col-md-6 col-md-offset-1 col-sm-8 col-xs-12">    
+												<input class="inputMaterial" type="text" placeholder=""
+      onblur="this.placeholder = ''" onfocus="this.placeholder = 'xyz@cmu.edu'" required>
+                                                <span class="highlight"></span>
+                                                <span class="bar"></span>
+                                                <label style = "margin-left : 10px;">Email<span class="asterik">*</span></label>
+										</div>
+									</div>
+								 <div class="group" id = "id_phone">
+										<div class="col-md-6 col-md-offset-1 col-sm-8 col-xs-12">    
+												<input class="inputMaterial" type="text" placeholder=""
+      onblur="this.placeholder = ''" onfocus="this.placeholder = '9999999999'"  required>
+                                                <span class="highlight"></span>
+                                                <span class="bar"></span>
+                                                <label style = "margin-left : 10px;">Phone<span class="asterik">*</span></label>
+										</div>
+									</div>
+								 </div>
+							<div class = "container" id = "align_password" style = "margin-top: 30px;">
+								 <div class="group" id = "id_password">
+										<div class="col-md-6 col-md-offset-1 col-sm-8 col-xs-12">  
+												<input class="inputMaterial" type="password" required>
+                                                <span class="highlight"></span>
+                                                <span class="bar"></span>
+                                                <label style = "margin-left : 10px;">Password<span class="asterik">*</span></label> 
+										</div>
+									</div>
+								 <div class="group" id = "id_reenter_password">
+										<div class="col-md-6 col-md-offset-1 col-sm-8 col-xs-12">  
+												<input class="inputMaterial" type="password" required>
+                                                <span class="highlight"></span>
+                                                <span class="bar"></span>
+                                                <label style = "margin-left : 10px;">Re-Enter Password<span class="asterik">*</span></label> 
+										</div>
+									</div>
+								</div>
                         <!-- Submit Button -->
-                        <div class="group">
-                            <div class="col-sm-offset-2 col-sm-4">
-                                <button type="submit" class="btn btn-primary btn-block" id="submit">
+                        <div class="group" id = "submitid">
+                                <button type="submit" class="btn btn-primary" id="submit">
                                     <h4 class="font-semibold">Submit</h4></button>
-                            </div>
-                        </div> <!-- /submitbutton -->
+                                </div> <!-- /submitbutton -->
                     </form> <!-- /form -->
-                </div> <!-- /wrapper -->
             </div> <!-- /container -->
+		</div>
 	    
         <!-- Navigation Bar -->
         
-        <nav class="navbar navbar-default navbar-fixed-top" style="
-    padding-top: 0px;
-    padding-bottom: 0px;
-">
+        <nav class="navbar navbar-default navbar-fixed-top">
         <div class="nav-container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">

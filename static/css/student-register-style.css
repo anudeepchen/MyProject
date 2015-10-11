@@ -1,13 +1,15 @@
 
 /* BOTTOM BARS ================================= */
-.bar 	{ position:relative; display:block; width:400px; }
+.bar
+{ position:relative; display:block; width:300px; }
+
 
 #register-form{
 margin-top : 60px;
 }
 
 .inputMaterial{
-    width:400px;
+    width:300px;
 } 
 
 h2.font-bold{

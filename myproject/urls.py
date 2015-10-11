@@ -20,6 +20,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     url(r'^$', 'myproject.views.home'),
+    url(r'^howitworks/$', 'myproject.views.howitworks'),
     url(r'^admin/', include(admin.site.urls)),
     
     #Student Register

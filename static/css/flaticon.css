@@ -11,11 +11,21 @@
 [class^="flaticon-"]:before, [class*=" flaticon-"]:before,
 [class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
 	font-family: Flaticon;
-    font-size: 60px;
+        font-size: 50px;
 font-style: normal;
-}.flaticon-data2:before {
+margin-left: 20px;
+}
+
+
+.flaticon1-business162:before {
 	content: "\e000";
 }
-.flaticon-global45:before {
+.flaticon-data2:before {
 	content: "\e001";
+}
+.flaticon1-newspaper25:before {
+	content: "\e002";
+}
+.flaticon1-office-worker2:before {
+	content: "\e003";
 }

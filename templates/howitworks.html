@@ -1,0 +1,438 @@
+{%extends "base.html"%}
+{% block content %}
+<link rel="stylesheet" href="/static/css/flaticon.css" />
+<script src="/static/js/shrink.js"></script>
+
+<style>
+ #container-slide1{
+   padding-top : 100px;
+   height: 100%;
+   }
+   .overlay{
+   width : 100%;
+   height : 100%;
+   padding : 20px;
+   position : relative;
+   }
+   .textarea {
+   height : 50%;
+   margin-top: 50px;
+   }
+   .textarea > h6{
+   color: white;
+   margin-top : 100px;
+   font-family: 'Lato', serif;
+   font-weight: 400;
+   text-align : center;
+   font-size: 30px;
+   }
+ 
+ #employeebutton {
+   background: rgba(24, 188, 156, 0.7);
+   border-style: none;
+   color: #fff;
+   word-spacing: 5px;
+   padding-left: 25px;
+   padding-right: 25px;
+   padding-top: 10px;
+   padding-bottom: 10px;
+   font-size: 20px;
+   }
+   #employeebutton:hover {
+   background: rgba(24, 188, 156, 1);
+   border-style: none;
+   color: #fff;
+   }
+
+h1{
+    margin : 70px 0 auto 0;
+	font-size: 48px;
+    font-weight: 200;
+    text-align: center;
+    color: #333;
+	text-transform: none;
+}
+
+	
+ .timeline-box{
+  height:400px;
+  width : 200px;
+  float : left;
+  position: relative;
+  list-style: none;
+  background-color:white;
+ }
+ 
+ .timeline-box :before{
+    position: absolute;
+	top: 0;
+    bottom: 0;
+    content: " ";
+    width: 3px;
+    background-color: #eeeeee;
+    left: 50%;
+    margin-left: -1.5px;
+ }
+ 
+#howitworks-emp{
+ background-color: #f5f5f5;
+ height:900px;
+}
+
+#howitworks-stud{
+ background-color: #f5f5f5;
+ height:900px;
+}
+
+ #timeline-container{
+  margin-top : 80px;
+ }
+
+.timeline {
+  list-style: none;
+  padding: 20px 0 20px;
+  position: relative;
+  margin-top: 100px;
+}
+
+.timeline:before {
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  content: " ";
+  width: 3px;
+  background-color: #CCCCCC;
+  left: 335px;
+  margin-left: -1.5px;
+  margin-top:40px;
+  height: 710px;
+}
+
+.timeline > li {
+  margin-bottom: 50px;
+  position: relative;
+  height : 150px;
+}
+.timeline > li:before,
+.timeline > li:after {
+  content: " ";
+  display: table;
+}
+.timeline > li:after {
+  clear: both;
+}
+.timeline > li:before,
+.timeline > li:after {
+  content: " ";
+  display: table;
+}
+.timeline > li:after {
+  clear: both;
+}
+.timeline > li > .timeline-panel {
+  width: calc( 100% - 455px );
+  float: right;
+  margin-top : 30px;
+  border: 1px solid #d4d4d4;
+  border-radius: 22px;
+  padding: 10px;
+  position: relative;
+  -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+}
+.timeline > li > .timeline-panel:before {
+  position: absolute;
+  top: 26px;
+  left: -15px;
+  display: inline-block;
+}
+.timeline > li > .timeline-panel:after {
+  position: absolute;
+  top: 27px;
+  left: -14px;
+  display: inline-block;
+}
+.timeline > li > .timeline-badge {
+  color: #FFFFFF;
+  width: 120px;
+  height: 120px;
+  line-height: 25px;
+  font-size: 1.4em;
+  text-align: center;
+  position: absolute;
+  top: 16px;
+  left: 275px;
+  background: rgba(24, 188, 156, 1);
+  z-index: 100;
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+
+.timeline > li > .timeline-badge:hover{
+ background-color: rgba(52, 101, 164, 1);
+   border-style: none;
+   color: #fff;
+}
+
+.timeline > li.timeline-inverted > .timeline-panel {
+  float: left;
+}
+.timeline > li.timeline-inverted > .timeline-panel:before {
+  border-left-width: 0;
+  border-right-width: 15px;
+  right: -15px;
+  right: auto;
+}
+.timeline > li.timeline-inverted > .timeline-panel:after {
+  border-left-width: 0;
+  border-right-width: 14px;
+  left: -14px;
+  right: auto;
+}
+.timeline-badge.primary {
+  background-color: #3465a4  !important;
+}
+.timeline-badge.up {
+  background-color: rgba(24, 188, 156, 1);
+}
+.timeline-badge.down {
+  background-color: rgba(24, 188, 156, 1);
+}
+.timeline-badge.neutral {
+  background-color: #999999 !important;
+}
+.timeline-title {
+  margin-top: 0;
+  color: inherit;
+}
+.timeline-body > p,
+.timeline-body > ul {
+  margin-bottom: 0;
+}
+.timeline-body > p + p {
+  margin-top: 5px;
+}
+
+.flaticon-office-worker2{
+ font-size:200px;
+}
+
+[class^="flaticon1-"]:before, [class*=" flaticon1-"]:before,
+[class^="flaticon1-"]:after, [class*=" flaticon1-"]:after {   
+	font-family: Flaticon;
+        font-size: 60px;
+font-style: normal;
+margin-right: 17px;
+}
+
+.align-icon{
+ width : 100px;
+ height : 50px;
+ margin-top : 40px;
+ margin-left : 20px;
+}
+
+.timeline-title{
+ font-family: 'Lato', sans-serif;
+   font-weight: 500;
+   font-size: 25px;
+}
+.timeline-body{
+ font-family: 'Lato', sans-serif;
+   font-weight: 200;
+   font-size: 15px;
+}
+.navbar {
+   background-color:rgba(44, 62, 80, 0.6);
+   font-family: 'Lato', serif;
+   font-size: 24px;
+   font-weight: 300;
+  }
+</style>
+
+</head>
+<body>
+   
+<nav class="navbar navbar-default navbar-fixed-top">
+        <div class="nav-container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" style = "color : white;">ZigZag</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="/" style = "color : white;">Home</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#about" style = "color : white;">About</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#contact" style = "color : white;">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+  </div>  
+</nav> 
+
+<div class = "section" id = "slide1">
+      <div class = "intro-block intro-bg">
+         <div class="container" id = "container-slide1">
+            <div class = "overlay">
+               <div class = "textarea" align="center">
+                  <h6 class = "header-mission">Our mission is to revolutinize the Job Search</h6>
+               </div>
+               <div class = "col-md-3 col-md-offset-5">
+                  <button type="button" id = "employeebutton" class="btn btn-primary"><strong>Employee</strong></button>  	
+               </div>
+			   
+            </div>
+         </div>
+      </div>
+   </div>
+
+
+
+
+<div class = "section" id = "howitworks-emp">
+  <div class="container" id = "timeline-container">
+    <ul class="timeline">
+        <li><!---Time Line Element--->
+          <div class="timeline-badge up" id = "badge1"><div class = "align-icon"><b class="flaticon1-office-worker2"></b></div></div>
+          <div class="timeline-panel" id = "panel1">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">Sign up</h4>
+            </div>
+            <div class="timeline-body"><!---Time Line Body&Content--->
+              <p>Create a profile</p>
+            </div>
+          </div>
+        </li>
+        <li><!---Time Line Element--->
+          <div class="timeline-badge down"><div class = "align-icon"><b class="flaticon1-newspaper25"></b></div></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">Post a Job</h4>
+            </div>
+            <div class="timeline-body"><!---Time Line Body&Content--->
+              <p>Provide the detailed description</p>
+              <p>And some more Time line content </p>
+            </div>
+          </div>
+        </li>
+		<li><!---Time Line Element--->
+          <div class="timeline-badge down"><div class = "align-icon"><b class="flaticon1-business162"></b></div></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">Review</h4>
+            </div>
+            <div class="timeline-body"><!---Time Line Body&Content--->
+              <p>Time line content is placed here...</p>
+              <p>And some more Time line content </p>
+            </div>
+          </div>
+        </li>
+        <li><!---Time Line Element--->
+          <div class="timeline-badge down"><div class = "align-icon"><b class="flaticon1-business162"></b></div></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">Refer the Student</h4>
+            </div>
+            <div class="timeline-body"><!---Time Line Body&Content--->
+              <p>Time line content is placed here...</p>
+              <p>And some more Time line content </p>
+            </div>
+          </div>
+        </li>
+    </ul>
+</div>
+ 
+
+
+<div class = "section" id = "howitworks-stud" style="display: none;">
+  <div class="container" id = "timeline-container">
+    <ul class="timeline">
+        <li><!---Time Line Element--->
+          <div class="timeline-badge up" id = "badge1"><div class = "align-icon"><b class="flaticon1-office-worker2"></b></div></div>
+          <div class="timeline-panel" id = "panel1">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">Sign up</h4>
+            </div>
+            <div class="timeline-body"><!---Time Line Body&Content--->
+              <p>Create a profile</p>
+            </div>
+          </div>
+        </li>
+        <li><!---Time Line Element--->
+          <div class="timeline-badge down"><div class = "align-icon"><b class="flaticon1-newspaper25"></b></div></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">Upload your resume</h4>
+            </div>
+            <div class="timeline-body"><!---Time Line Body&Content--->
+              <p>Provide the detailed description</p>
+              <p>And some more Time line content </p>
+            </div>
+          </div>
+        </li>
+		<li><!---Time Line Element--->
+          <div class="timeline-badge down"><div class = "align-icon"><b class="flaticon1-business162"></b></div></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">Look for jobs</h4>
+            </div>
+            <div class="timeline-body"><!---Time Line Body&Content--->
+              <p>Time line content is placed here...</p>
+              <p>And some more Time line content </p>
+            </div>
+          </div>
+        </li>
+        <li><!---Time Line Element--->
+          <div class="timeline-badge down"><i class="text2"></i></div>
+          <div class="timeline-panel" style="display: none;">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">Time Line Entry #2</h4>
+            </div>
+            <div class="timeline-body"><!---Time Line Body&Content--->
+              <p>Time line content is placed here...</p>
+              <p>And some more Time line content </p>
+            </div>
+          </div>
+        </li>
+    </ul>
+</div>
+
+
+
+</div>
+
+
+
+<script src="http://ironsummitmedia.github.io/startbootstrap-freelancer/js/jquery.js"></script>
+   <!-- Bootstrap Core JavaScript -->
+   <script src="http://ironsummitmedia.github.io/startbootstrap-freelancer/js/bootstrap.min.js"></script>
+   <!-- Plugin JavaScript -->
+   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+   <script src="http://ironsummitmedia.github.io/startbootstrap-freelancer/js/classie.js"></script>
+   <script src="http://ironsummitmedia.github.io/startbootstrap-freelancer/js/cbpAnimatedHeader.js"></script>
+   <!-- tooltipster -->
+
+
+
+</body>
+
+{% endblock %}
