@@ -52,6 +52,11 @@ urlpatterns = [
     #glassdoor
      url(r'^auth/glassdooor/$', 'myproject.views.get_glassdoor'),
      
+     
+     #buzzsumo
+     
+      url(r'^auth/buzzsumo/$', 'myproject.views.customerlist'),
+      url(r'^auth/klout/$', 'myproject.views.kloutApi'),
      #test
      url(r'^auth/test/$', 'myproject.views.test'),
 ]

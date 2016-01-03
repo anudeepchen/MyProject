@@ -140,3 +140,34 @@ def  test(request):
 
 def  howitworks(request):
     return render(request,"howitworks.html",{})
+
+
+
+def customerlist(request):
+    content = urllib2.urlopen("http://api.buzzsumo.com/search/influencers.json?q=cloud&result_type=relevancy&page=0&person_types=influencer&ignore_broadcasters=0&api_key=yige_temp")
+    j = json.loads(content.readall().decode('ascii','ignore'))
+    results = j['results']
+    
+    for i in range(len(results)):
+        profile = results[i]
+        name = profile['name']
+        username = profile['username']
+        image = profile['image']
+        bio = profile['bio']
+        page_authority = profile['page_authority']
+        domain_authority = profile['domain_authority']
+        if 'url' in profile:
+            urlb = profile['url']
+        else: urlb = ''
+        location = profile['location']
+        print (urlb)
+    #return render(request, 'dell/customerlist.html', {'hasLogin' : 'true'})
+    
+    
+def mostshared(request):
+    most_shared = urllib2.urlopen("http://api.buzzsumo.com/search/articles.json?q=marketing&api_key=yige_temp&result_type=total")
+    print (most_shared)
+    return render(request, 'dell/mostshared.html', {'hasLogin' : 'true'})
+
+
+

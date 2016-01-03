@@ -16,7 +16,7 @@ def register(request):
     context = {"form" : RegisterForm()}
     context.update(csrf(request))
     template = "student_register.html"
-    return render_to_response(template, context)
+    return render_to_response("student_register.html", {"form" : RegisterForm()})
 
 
 # Method allows the user to enter the information and submit
