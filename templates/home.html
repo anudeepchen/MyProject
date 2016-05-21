@@ -10,7 +10,7 @@
    >
 <style>
    .intro-block{
-   background: rgba(24, 188, 156, 0.7);
+   background: rgba(24, 188, 156, 0.4);
    position: absolute;
    top: 0;
    left: 0;
@@ -71,10 +71,17 @@
    text-align : center;
    font-size: 30px;
    }
-   #howitworksbutton {
+   .registerbuttons{
+      width: 100%;
+      height: 100px;
+      position: relative;
+   }
+   #foodbutton {
    background: rgba(24, 188, 156, 0.7);
    border-style: none;
    color: #fff;
+   left: 0;
+   position: absolute;
    word-spacing: 5px;
    padding-left: 25px;
    padding-right: 25px;
@@ -82,7 +89,25 @@
    padding-bottom: 10px;
    font-size: 20px;
    }
-   #howitworksbutton:hover {
+   #foodbutton:hover {
+   background: rgba(24, 188, 156, 1);
+   border-style: none;
+   color: #fff;
+   }
+   #cookbutton {
+   background: rgba(24, 188, 156, 0.7);
+   border-style: none;
+   color: #fff;
+   right: 0;
+   position: absolute;
+   word-spacing: 5px;
+   padding-left: 25px;
+   padding-right: 25px;
+   padding-top: 10px;
+   padding-bottom: 10px;
+   font-size: 20px;
+   }
+   #cookbutton:hover {
    background: rgba(24, 188, 156, 1);
    border-style: none;
    color: #fff;
@@ -149,48 +174,15 @@
          <div class="container" id = "container-slide1">
             <div class = "overlay">
                <div class = "textarea" align="center">
-                  <h6 class = "header-mission">Our mission is to revolutinize the Job Search</h6>
+                  <h6 class = "header-mission">Find food in your Neighbourhood</h6>
                </div>
-               <div class = "col-md-3 col-md-offset-5">
-                  <button type="button" id = "howitworksbutton" class="btn btn-primary"><strong>Know How!</strong></button>  	
-               </div>
-            </div>
-         </div>
-      </div>
-   </div>
-   <div class = "section" id = "slide2">
-      <div class = "mission-block mission-bg">
-         <div class="container">
-            <div class = "col-md-10 col-md-offset-1 text-center">
-               <h1 class="feature-values">What we do</h1>
-            </div>
-         </div>
-      </div>
-   </div>
-   <div class="section" id="about">
-      <div class="container" id = "tech-container">
-         <div class="row" id = "tech-row">
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-               <a class="block hint--top hint--rounded" data-hint="Click here" id = "cloud-button">
-               <i class="hovicon effect-3 sub-a"><b class="material-icons w3-text-teal" style="font-size:70px;margin-top: 10px">cloud</b>
-               </i>
-               </a>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-               <div class="block hint--top hint--rounded" data-hint="Click here" id = "api-button">
-                  <i class="hovicon effect-3 sub-a"><b class="material-icons w3-text-teal" style="font-size:70px;margin-top: 10px">laptop</b>
-                  </i>
-               </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-               <div class="block hint--top hint--rounded" data-hint="Click here" id = "tech-button">
-                  <i class="hovicon effect-3 sub-a"><b class="material-icons w3-text-teal" style="font-size:70px;margin-top: 10px">settings</b>
-                  </i>
-               </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-               <div class="block hint--top hint--rounded" data-hint="Click here" id = "ml-button">
-                  <i class="hovicon effect-3 sub-a" ><b class="flaticon-data2" style="font-size:50px;"></b></i>
+               <div class = "registerbuttons">
+                  <div class = "col-md-1">
+                     <button type="button" id = "foodbutton" class="btn btn-primary"><strong>I love Eating!</strong></button>
+                  </div>
+                  <div class = "col-md-10">
+                     <button type="button" id = "cookbutton" class="btn btn-primary"><strong>I love Cooking!</strong></button>
+                  </div>
                </div>
             </div>
          </div>
@@ -198,125 +190,8 @@
    </div>
    </div>
    
-   <div class="text-block" id = "cloud-block" style="display: none;">
-      <div class = "container" id = "text-area">
-         <h1 class="feature-values" style = "color : #18bc9c;">
-            Cloud
-            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="float: right;" >
-               <a class="close" id="close-button" style="float: right;font-size: 50px; font-weight: 300;color:white;">
-               &times;</a>
-            </div>
-         </h1>
-         <h6 class = "header-mission" style = "color : #18bc9c;">Using Cloud just for fun</h6>
-      </div>
-   </div>
-   <div class="text-block" id = "api-block" style="display: none;">
-      <div class = "container" id = "text-area">
-         <h1 class="feature-values" style = "color : #18bc9c;">
-            Api Integration
-            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="float: right;" >
-               <a class="close" id="close-button" style="float: right;font-size: 50px; font-weight: 300;color:white;">
-               &times;</a>
-            </div>
-         </h1>
-		 <h6 class = "header-mission" style = "color : #18bc9c;">Using Api Integration just for fun</h6>
-      </div>
-   </div>
-   <div class="text-block" id = "tech-block" style="display: none;">
-      <div class = "container" id = "text-area">
-         <h1 class="feature-values" style = "color : #18bc9c;">
-            Technologies
-            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="float: right;" >
-               <a class="close" id="close-button" style="float: right;font-size: 50px; font-weight: 300;color:white;">
-               &times;</a>
-            </div>
-         </h1>
-		 <h6 class = "header-mission" style = "color : #18bc9c;">Using Technologies just for fun</h6>
-      </div>
-   </div>
-   <div class="text-block" id = "ml-block" style="display: none;">
-      <div class = "container" id = "text-area">
-         <h1 class="feature-values" style = "color : #18bc9c;">
-            Machine Learning
-            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="float: right;" >
-               <a class="close" id="close-button" style="float: right;font-size: 50px; font-weight: 300;color:white;">
-               &times;</a>
-            </div>
-         </h1>
-		 <h6 class = "header-mission" style = "color : #18bc9c;">Using Machine Learning just for fun</h6>
-      </div>
-   </div>
    
-   
-   <div class = "section" id = "slide4">
-      <div class="container">
-         <div id="header">
-            <div id="bottom-head">
-               <h2 id="logintoregister"></h2>
-            </div>
-         </div>
-         <div class="col-md-2 col-sm-3 col-xs-3 company_logo_item">
-            <img alt="logo" src="/static/logos/Amazon.png" style ="width: 150px; height: 41px;">
-         </div>
-         <div class="col-md-2 col-sm-3 col-xs-3 company_logo_item">
-            <img alt="logo" src="/static/logos/Google.png" style ="width: 150px; height: 41px;">
-         </div>
-         <div class="col-md-2 col-sm-3 col-xs-3 company_logo_item">
-            <img alt="logo" src="/static/logos/Facebook.png" style ="width: 150px; height: 41px;">
-         </div>
-         <div class="col-md-2 col-sm-3 col-xs-3 company_logo_item">
-            <img alt="logo" src="/static/logos/Uber.png" style ="width: 150px; height: 60px;">
-         </div>
-         <div class="col-md-2 col-sm-3 col-xs-3 company_logo_item">
-            <img alt="logo" src="/static/logos/Adobe.png" style ="width: 150px; height: 60px;">
-         </div>
-         <div class="col-md-2 col-sm-3 col-xs-3 company_logo_item">
-            <img alt="logo" src="/static/logos/Ibm.png" style ="width: 150px; height: 60px;">
-         </div>
-         <div class="col-md-2 col-sm-3 col-xs-3 company_logo_item">
-            <img alt="logo" src="/static/logos/Autodesk.png" style ="width: 150px; height: 40px;">
-         </div>
-         <div class="col-md-2 col-sm-3 col-xs-3 company_logo_item">
-            <img alt="logo" src="/static/logos/Linkedin.png" style ="width: 100px; height: 60px;">
-         </div>
-      </div>
-   </div>
-   <footer class="text-center">
-      <div class="footer-above">
-         <div class="container" id= "footer-container">
-            <div class="row">
-               <div class="footer-col col-md-4">
-                  <h3>Location</h3>
-                  <p>Gates Hillman<br>Carnegie Mellon University, PA 15213</p>
-               </div>
-               <div class="footer-col col-md-4">
-                  <h3>Around the Web</h3>
-                  <ul class="list-inline">
-                     <li>
-                        <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
-                     </li>
-                     <li>
-                        <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
-                     </li>
-                     <li>
-                        <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
-                     </li>
-                     <li>
-                        <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
-                     </li>
-                     <li>
-                        <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-instagram"></i></a>
-                     </li>
-                  </ul>
-               </div>
-               <div class="footer-col col-md-4">
-                  <h3>About Us</h3>
-                  <p>Working for Passion <a href="http://startbootstrap.com">To make our lives better</a>.</p>
-               </div>
-            </div>
-         </div>
-      </div>
-   </footer>
+
    <!-- jQuery -->
    <script src="http://ironsummitmedia.github.io/startbootstrap-freelancer/js/jquery.js"></script>
    <!-- Bootstrap Core JavaScript -->

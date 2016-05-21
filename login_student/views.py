@@ -10,7 +10,7 @@ from django.contrib.auth.hashers import make_password,check_password
 from django.contrib import messages
 from django.core.mail import send_mail
 from django.shortcuts import render, render_to_response, RequestContext, HttpResponseRedirect
-from datetime import datetime,timezone,timedelta
+from datetime import datetime,timedelta
 from django.core.serializers.json import DjangoJSONEncoder
 import json
 from django.utils.timezone import utc,make_aware

@@ -38,4 +38,102 @@ div.col-sm-offset-2.col-sm-4{
 .asterik{color:#c2272d;
 top:12px;left:-10px}
 
+body{
+		background: #e6e6e6;
+		overflow: hidden;
+	}
+	
+	.navbar {
+   background-color:rgba(44, 62, 80, 1);
+   font-family: 'Lato', serif;
+   font-size: 20px;
+   font-weight: 300;
+   padding: 10px;
+  }
+  
+  #register-form{
+	background-color: white;
+	margin-top : 150px;
+	height: 450px;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  }
+
+  #signupform{
+	width : 70%;
+	float: right;
+  }
+  
+  #align_names {
+	width : 700px;
+  }
+  
+  #align_field {
+	width : 700px;
+	position: relative;
+  }
+  #id_first_name {
+	float:left;
+	width : 310px;
+	margin: 0;
+  }
+ 
+  #id_last_name{
+	float :right;
+	width : 310px;
+	margin: 0;
+  }
+  
+  #align_password {
+	width : 700px;
+  }
+  
+   #id_password {
+	float:left;
+	width : 310px;
+	margin: 0px;
+  }
+  
+  #id_reenter_password{
+	float :right;
+	width : 310px;
+	margin: 0px;
+  }
+  
+   #id_email {
+	float:left;
+	width : 310px;
+	margin: 0px;
+  }
+  
+  #id_phone{
+	float :right;
+	width : 310px;
+	margin: 0px;
+  }
+  
+  #signup_row{
+	margin : 0px;
+  }
+  
+  
+   #sel1{
+    position: absolute;
+    width: 310px;
+    top: 0px;
+    margin-top: 12px;
+    margin-left: 10px;
+    outline: none;
+    border-top: 0px;
+    border-left:0px;
+    border-right: 0px;
+    border-bottom: 1px solid #757575;
+   }
+
+
+  
+  .inputMaterial:focus ~ label, .inputMaterial:valid ~ label 	{
+  top:-20px;
+  font-size:14px;
+  color: black;
+}
 </style>

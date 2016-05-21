@@ -18,7 +18,7 @@ div.box{
 }
 
 .navbar {
-   background-color:rgba(44, 62, 80, 0.6);
+   background-color:rgba(44, 62, 80, 1);
    font-family: 'Lato', serif;
    font-size: 20px;
    font-weight: 300;
@@ -37,6 +37,35 @@ div.box{
 </head>
 <body>
    
+
+<div class = "section" id = "siginin">
+   <div class="container">
+     <div class="box">
+       <div id="header">
+	    <div id="bottom-head"><h1 id="logintoregister">Login</h1></div>
+	  </div> 
+       <form action="/accounts/job_details/" method="post">
+		  {% csrf_token %}
+        <div class="group">      
+         <input class="inputMaterial" type="email" required>
+         <span class="highlight"></span>
+         <span class="bar"></span>
+         <label>Email</label>
+        </div>
+	    <div class="group">      
+         <input class="inputMaterial" type="password" required>
+         <span class="highlight"></span>
+         <span class="bar"></span>
+         <label>Password</label>
+        </div>
+      <button id="buttonlogintoregister" type="submit">Login</button>
+  <p class="footer-text">Not a member?  <span class="sign-up"><a href=/accounts/student_register>Sign up now</a></span></p>
+  <p class="footer-text"><span class="forgot-password"><a href=/accounts/student_register>Forgot Password</a></span></p>
+      </form>
+    </div>
+  </div>
+ </div>
+
    
  
    <nav class="navbar navbar-default navbar-fixed-top">
@@ -71,35 +100,6 @@ div.box{
             </div>
         </div>
     </nav> 
-
-<div class = "section" id = "siginin">
-   <div class="container">
-     <div class="box">
-       <div id="header">
-	    <div id="bottom-head"><h1 id="logintoregister">Login</h1></div>
-	  </div> 
-       <form action="/accounts/job_details/" method="post">
-		  {% csrf_token %}
-        <div class="group">      
-         <input class="inputMaterial" type="email" required>
-         <span class="highlight"></span>
-         <span class="bar"></span>
-         <label>Email</label>
-        </div>
-	    <div class="group">      
-         <input class="inputMaterial" type="password" required>
-         <span class="highlight"></span>
-         <span class="bar"></span>
-         <label>Password</label>
-        </div>
-      <button id="buttonlogintoregister" type="submit">Login</button>
-  <p class="footer-text">Not a member?  <span class="sign-up"><a href=/accounts/student_register>Sign up now</a></span></p>
-  <p class="footer-text"><span class="forgot-password"><a href=/accounts/student_register>Forgot Password</a></span></p>
-      </form>
-    </div>
-  </div>
- </div>
-
 
 
    <!-- tooltipster -->

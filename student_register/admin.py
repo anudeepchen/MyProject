@@ -3,7 +3,7 @@ from .models import Student_Profile
 
 # Register your models here.
 class RegisterAdmin(admin.ModelAdmin):
-	list_display = ['email','phone']
+	list_display = ['email','location']
 	class Meta:
 		model = Student_Profile
 admin.site.register(Student_Profile,RegisterAdmin)

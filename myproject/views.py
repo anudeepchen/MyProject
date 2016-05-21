@@ -4,10 +4,10 @@ from django.shortcuts import render
 
 import oauth2 as oauth
 #import httplib2
-import time, os, simplejson
+import time, os
 import urllib
 #import urllib2
-import urllib.request as urllib2
+import urllib2
 #import urllib.request as request
 #import pycurl
 from bs4 import BeautifulSoup
@@ -18,9 +18,9 @@ from django.core.urlresolvers import resolve
 from django import forms
 from django.utils import timezone
 #import urlparse
-from urllib.parse import urlparse
+import urlparse
 import requests
-import json
+import json as simplejson
 from collections import OrderedDict
 
 #Linkedin

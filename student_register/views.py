@@ -28,14 +28,14 @@ def register_user(request):
             if form.is_valid():
                 email = form.cleaned_data['email']
                 username = email + 'student'
-                phone = form.cleaned_data['phone']
+                location = form.cleaned_data['location']
                 new_user = User.objects.create_user(username,email,
                                         form.cleaned_data['password'])
                 new_user.first_name = form.cleaned_data['first_name']
                 new_user.last_name = form.cleaned_data['last_name']
                 new_user.save()
                 
-                new_form = Student_Profile(email=email,phone=phone)
+                new_form = Student_Profile(email=email,location=location)
                 new_form.save()
                 
                 form = RegisterForm()
