@@ -12,7 +12,6 @@ class RegisterForm(forms.Form):
 		self.fields['last_name'] = forms.CharField(max_length=120)
 		self.fields['email'] = forms.EmailField()
 		self.fields['location'] = forms.CharField(max_length=120)
-		#self.fields['phone'] = forms.CharField(max_length=15, validators=[RegexValidator(regex=r'^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$')])
 		self.fields['password'] = forms.CharField(max_length=32, widget=forms.PasswordInput)
 		self.fields['confirm_password'] = forms.CharField(max_length=32, widget=forms.PasswordInput)
 		
