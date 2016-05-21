@@ -1,0 +1,52 @@
+
+  #about{
+	background-color: #18bc9c;
+}
+
+div#slide1.section{
+  width : 100%;
+  height:100%;
+  background: url("../images/slide1/slide1.jpg");
+  background-position-x: 50%;
+  background-position-y: 50%;
+  background-size: cover;
+  position:relative;
+}
+
+
+div#slide4.section{
+  width : 100%;
+  height:80%;
+}
+div.center-head1{
+  text-align: center;
+color : white
+}
+
+div.center-head2{
+  text-align: center;
+}
+
+img.hidden-xs2{
+  margin-left : 15px;
+  margin-top: 20px;
+}
+
+img.hidden-xs1{
+  margin-right : 50px;
+  margin-top: 20px;
+}
+div.row.text-center{
+  margin-left:40px;
+}
+
+#button1 {
+  margin-top: 20px;
+  margin-right: 60px;
+}
+
+#button2 {
+  margin-top: 20px;
+  margin-left: 15px;
+}
+
