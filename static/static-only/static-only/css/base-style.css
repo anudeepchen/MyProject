@@ -50,3 +50,7 @@ div.row.text-center{
   margin-left: 15px;
 }
 
+div.nav-container{
+   width: 80%;
+   margin-left:100px; 
+}
